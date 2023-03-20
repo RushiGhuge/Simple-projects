@@ -1,0 +1,92 @@
+*{
+   margin: 0;
+   padding: 0;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.nav{
+   display: flex;
+}
+.container{
+   background: black;
+   width: 25%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   color: white;
+   
+
+}
+.logo img{
+   width: 120px;
+   padding: 0 0 20px 0;
+}
+.sections{
+   color: white;
+   display: flex;
+   flex-direction: column;
+   font-size: 15px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight: bold;
+   color: rgb(192, 192, 192);
+   
+}
+.icon{
+   margin: 8px;
+   display:flex;
+   gap: 10px;
+}
+/* #home{
+   color: white;
+} */
+.icon:hover{
+   color: white;
+}
+.sec2{
+   margin-top: 20px;
+}
+
+.container hr{
+   margin: 15px 0;
+   color: red(0, 0, 0);
+}
+.main h1{
+   font-size: 30px;
+   color: white;
+}
+.main{
+   background-image: linear-gradient(rgb(77, 22, 109), black);
+   flex-grow: 0;
+   padding: 20px;
+}
+.playlist img{
+   width: 100px;
+   border-radius: 10px 0px 0px 10px;
+}
+.playlist{
+   margin-top: 50px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-self: center;
+   align-items: center; 
+   color: white;
+   font-weight: bold;
+}
+.playlist-items{
+   background: rgba(248, 248, 248, 0.2); 
+   backdrop-filter: blur(8px);
+   border-radius: 10px;
+   margin: 10px;
+   width: 300px;
+   display: flex;
+   flex-direction: row;
+   justify-self: center;
+   align-items: center;
+   gap: 20px;
+   flex-grow: 1;
+}
+.playlist-items:hover{
+ 
+   background: rgba(255, 255, 255, 0.3); 
+
+}
