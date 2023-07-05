@@ -117,7 +117,7 @@
         margin-inline: 30px;
         width: 350px;
     }
-
+  
     .center-container {
         display: flex;
         justify-content: center;
@@ -129,9 +129,13 @@
         margin: auto;
     }
 
-    .gallary-container{
+    .gallary{
+        margin-top: 70px;
+        margin-bottom: 50px;
+        margin-inline:15px ;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
+        /* background: red; */
     }
 
     .footer{
@@ -145,32 +149,54 @@
         color: white;
     }
 
-    .location{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-inline:0px;
-        margin-top: 50px;
-        color: white;
-        /* gap: 150px; */
-        justify-content: space-between;
-    }
-    .left-location{
-        width: 90%;
-    }
     
-    .left-location p{
-        width: 90%;
-    }
-    .right-location {
-        width: 90%;
+.location {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    margin-inline: 20px;
+    margin-top: 50px;
+    color: white;
+    padding: 20px;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.location img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.left-location {
+    .location img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     
-    }
-    .right-location img{
-        width: 90%;
-    }
+    }  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+
+.right-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
     
 }
 
 
 
+@media(max-width:460px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards  h2,p{
+        text-align: center;
+    }
+}

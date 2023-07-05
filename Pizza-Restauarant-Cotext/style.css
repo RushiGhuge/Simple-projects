@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .body {
@@ -188,7 +188,8 @@ main {
     display: flex;
 
 }
-.cards img{
+
+.cards img {
     width: 40%;
 }
 
@@ -200,107 +201,123 @@ main {
 }
 
 .card-details h2 {
-    color:#F2C94C;
+    color: #F2C94C;
     margin-bottom: 10px;
 }
 
-.carousel{
-   margin-top: 100px;
-   width: 100%;
-   /* z-index: -1;
+.carousel {
+    margin-top: 100px;
+    width: 100%;
+    /* z-index: -1;
 ￼ */
 }
-.carousel img{
 
-}
-.carousel-inner{
+.carousel img {}
+
+.carousel-inner {
     width: 70%;
     height: 500px;
     margin: auto;
 }
-.carousel-item{
+
+.carousel-item {
     /* height: 80vh; */
 }
-.heading h1{
+
+.heading h1 {
     margin: auto;
     width: 250px;
-   color: white;
-   text-align: center;
-   border-bottom: 10px solid #F24C4C;
+    color: white;
+    text-align: center;
+    border-bottom:1px solid #F24C4C;
 }
 
-.gallary{
+.gallary {
     margin-top: 70px;
     margin-bottom: 50px;
-    margin-inline:150px ;
+    margin-inline: 150px;
     display: flex;
     justify-content: center;
     /* background: red; */
 }
-.gallary-container{
-    /* background: pink; */
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
 
-.g-left{
-    /* width: 100%; */
-    /* height: 300px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background: navy; */
-}
-.g-left img{
+.g-container>div>img {
     width: 100%;
-    height: 450px;
-    flex:4;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
 }
-.g-mid img{
-    width: 200px;
+
+.g-container {
+    display: grid;
     gap: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background: red; */
-    margin: 6px 0;
-    flex: 2;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-flow: dense;
+    /* grid-auto-rows: 200px; */
 }
-.g-right img{
-    display: flex;
-    flex-direction: column;
-    /* background: pink; */
-    height: 220px;
-    gap: 10px;
-    margin: 6px #000;
-    flex: 1;
+
+.wide {
+    grid-row: span 2;
+    grid-column: span 2;
 }
-.com{
+
+.com {
     display: flex;
     gap: 10px;
 }
 
-.heading{
+.heading {
     color: white;
     margin: auto;
     width: 250px;
-   color: white;
-   text-align: center;
-   border-bottom: 10px solid #F24C4C;
+    color: white;
+    text-align: center;
+    border-bottom: 10px solid #F24C4C;
 }
 
-.location{
+.call {
+
     display: flex;
-    margin-inline:130px;
+    align-items: center;
+}
+
+.phone-num {
+    width: 100%;
+}
+
+.location img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.location {
+    display: flex;
+    width: 80%;
+    margin-inline: 130px;
     margin-top: 50px;
     color: white;
-    /* gap: 150px; */
+    padding: 20px;
     justify-content: space-between;
 }
-.left-location{
+
+.left-location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+.right-location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50%;
+}
+
+/* .left-location{
+    width: 100%;
 }
 
 .left-location p{
@@ -311,41 +328,51 @@ main {
 
 }
 .right-location img{
-    width: 80%;
-}
+    width: 100%;
+} */
 
-.footer{
+.footer {
     margin-top: 60px;
     display: flex;
-    margin-inline: 150px ;
+    margin-inline: 150px;
     justify-content: space-between;
     color: white;
 }
-.right-foot{
+
+.right-foot {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
 }
-.call{
 
-    display: flex;    align-items: center;
+.call {
+
+    display: flex;
+    align-items: center;
     /* background: red; */
     margin-top: 20px;
     margin-left: 10px;
 }
-.call i{
+
+.call i {
     font-size: 2rem;
     margin-right: 10px;
 }
-.fa-envelope{
+
+.fa-envelope {
     font-size: 2rem;
 }
-.mail p{
+
+.mail p {
     display: flex;
     gap: 5px;
     align-items: center;
 }
 
-.left-foot img{
+.left-foot img {
     width: 150px;
+}
+
+.heading{
+    margin-top: 40px;
 }
