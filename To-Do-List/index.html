@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jira-Clone</title>
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://kit.fontawesome.com/a6a0cd4ae6.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <button id="create">
+                <i class="fa-solid fa-plus fa-shake"></i>
+            </button>
+            <h1>TaskMaster <i class="fa-solid fa-list-check"></i></h1>
+        </header>
+
+        <div class="box-container">
+
+            <div class="box" id="TO_DO">
+                <h3>To Do <i class="fa-solid fa-pen-to-square"></i></h3>
+            </div>
+            
+            <div class="box" id="IN_PROGRESS">
+                <h3>In Progress <i class="fa-solid fa-bars-progress"></i></h3>
+            </div>
+
+            <div class="box" id="DONE">
+                <h3>Done <i class="fa-solid fa-check"></i></h3>
+            </div>
+
+        </div>
+
+      <section id="remove" >
+        <!-- this section for remove items in panels -->
+        <i class="fa-solid fa-trash"></i>
+      </section>
+
+        <script src="./Script.js"></script>
+        <script src="./draggable.js"></script>
+    </body>
+</html>
+
