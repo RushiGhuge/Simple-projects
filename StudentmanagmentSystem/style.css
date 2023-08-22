@@ -1,82 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 body{
-    background: black;
-    color: white;
     font-size: 16px;
 }
 h1{
-    margin: 50px 0 0 50px;
-}
-form{
-    width: 100%;
-    padding: 40px;
-}
-form > input{
-    width: 30%;
-    padding: 10px;
-    margin: 10px;
-    background: transparent;
-    border: 1px solid gray;
-    font-size: 1.1em;
-    color: white;
-}
-#add{
-    width: 400px;
-    background: white;
-    color: black;
-    border: none;
-    padding: 10px;
-    margin-left: 50px;
-    font-size: 1.1em;
-}
-.search-con{
-    width: 100%;
-    padding: 50px;
-}
-#search{
-    width: 100%;
-    padding: 10px;
-    background: transparent;
-    color: white;
-    border: 1px solid gray;
+    padding: 20px;
 }
 table{
-    width: 92%;
-    margin: auto;
-}
-table,th,td{
-    border: 1px solid gray;
-    padding: 10px;
+    margin: 20px;
     border-collapse: collapse;
-    text-align: start;
 }
-.delAndSelect{
-    display: flex;
-    justify-content: space-between;
-}
-.delAndSelect  span{
-    font-size: 1.1em;
-    display: flex;
-    gap: 10px;
-    cursor: pointer;
-}
-#add:disabled, #updateBtn:disabled{
-    opacity: 0.2;
-    cursor:not-allowed;
-}
-#updateBtn{
-    width: 400px;
-    background: white;
-    color: black;
-    border: none;
-    padding: 10px;
-    margin-left: 50px;
-    font-size: 1.1em;
-    &:hover{
-        opacity: 0.8;
-    }
+td,th{
+    padding:5px 10px;
 }

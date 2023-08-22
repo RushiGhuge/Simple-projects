@@ -1,52 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./style.css">
-        <script src="https://kit.fontawesome.com/a6a0cd4ae6.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <h1>Student Management CRUD</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <h1>Student Managament CRUD</h1>
 
-        <form action id="form">
-            <input id="name" type="text" name  placeholder="Name">
-            <input id="email" type="text" name  placeholder="Email">
-            <input id="gpa" type="text" name  placeholder="CGPA">
-            <input id="age" type="text" placeholder="Age">
-            <input id="degree" type="text" placeholder="Degree">
-        </form>
-        <button  id="add">Add Student</button>
-        <button  id="updateBtn">Update</button>
-        <div class="search-con">
-            <input id="search" type="text" placeholder="Search">
-        </div>
+    <form action="" onsubmit="return addStudent()">
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="grade" placeholder="GPA">
+        <input type="number" id="age" placeholder="Age">
+        <input type="text" id="degree" placeholder="Degree">
+        <input type="hidden" id="student-id">
+        <button id="sub-btn" type="submit">Add Student</button>
+    </form>
 
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>Gpa</th>
+                <th>Age</th>
+                <th>Degree</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
 
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Student Name</th>
-                    <th>Email</th>
-                    <th>GPA</th>
-                    <th>Age</th>
-                    <th>Degree </th>
-                </tr>
-            </thead>
+        </tbody>
+    </table>
 
-            <tbody id="tBody">
-                <tr>
-                    <td>1</td>
-                    <td>Rushi</td>
-                    <td>rushi@gmail.com</td>
-                    <td>8.9</td>
-                    <td>22</td>
-                    <td class="delAndSelect">B.E. <span> <i class="update" class="fa-solid fa-pen-to-square"></i> <i id="dele" class="fa-solid fa-trash"></i></span></td>
-                </tr>
-            </tbody>
-        </table>
-        <script src="./main.js"></script>
-    </body>
+    <script src="./main.js"></script>
+</body>
 </html>
