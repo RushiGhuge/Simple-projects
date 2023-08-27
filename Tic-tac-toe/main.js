@@ -22,6 +22,10 @@ function boxClicked(e) {
     spaces[id] = currentPlayer;
     e.target.innerText = currentPlayer;
     if (hasPlayerWin()) {
+      let winBox = hasPlayerWin();
+      winBox.forEach((box)=>{
+        boxes[box].style.background = "#489b41"
+      })
       heading.innerText = `${currentPlayer} has win!`;
       boxes.forEach((box) => box.removeEventListener("click", boxClicked));
     }
@@ -35,6 +39,7 @@ function restart() {
   boxes.forEach((box) => (box.innerText = ""));
   heading.innerText = `TIC TAC TOE`;
   startGame();
+  boxes.forEach(box => box.style.background = "#180f1b")
 }
 
 // make a function that cheak the pleyer is win or not
