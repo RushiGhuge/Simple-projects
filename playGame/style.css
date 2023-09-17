@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.canvas{
+    width: 100vw;
+    height: 100vh;
+    background: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 90%;
+    height: 90vh;
+    background: yellow;
+}
+#box{
+    background: #000;
+    width: 50px;
+    height: 50px;
+    transition: 0.1s;
+}
