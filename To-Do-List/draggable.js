@@ -15,12 +15,7 @@ for (let i = 0; i < items.length; i++) {
         let draggedElement = document.getElementById(sourceId);
         items[i].appendChild(draggedElement)
         // console.log(sourceId);
-
-
-       
     })
-
-
 }
 
 //this function is used for remove the item from list or  deletes
