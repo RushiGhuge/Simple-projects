@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <nav class="nav-bar">
+        Student Portal
+    </nav>
+
+    <main class="main-container">
+        <div class="search-container">
+            <input id="searchBar" type="text" placeholder="Search">
+            <button id="searchBtn" >Search</button>
+        </div>
+        <div class="function-container">
+            <button onclick="sortAscendingOder()">Sort A->Z</button>
+            <button onclick="sortDescendingOder()">Sort Z->A</button>
+            <button onclick="sortByMarks()">Sort By Marks</button>
+            <button onclick="sortByPassing()">Sort By Passing</button>
+            <button onclick="sortByClass()">Sort By Class</button>
+            <button onclick="sortByGender()">Sort By Gender</button>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Class</th>
+                        <th>Marks</th>
+                        <th>Passing</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+
+                <tbody id="table-body">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td class="name"> <img src="https://robohash.org/corporisquiaperiam.png?size=50x50&set=set1" alt=""><span>Name</span></td>
+                        <td>Gender</td>
+                        <td>Class</td>
+                        <td>Marks</td>
+                        <td>Passing</td>
+                        <td>Email</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+
+        <h1 id="notFound">Not Found</h1>
+
+    </main>
+
+    <script  src="./main.js"></script>
+
+</body>
+
+</html>

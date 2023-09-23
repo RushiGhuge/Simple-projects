@@ -64,5 +64,5 @@ setInterval(() => {
   }
 
   time.innerHTML = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()} `;
-  d.innerHTML = `${date.getDate()}, ${weekDay}  ${month}  ${date.getFullYear()}`;
+  d.innerHTML = ` ${date.getDate()}, ${weekDay}  ${month}  ${date.getFullYear()}`;
 }, 1000);
