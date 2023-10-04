@@ -171,8 +171,8 @@ function renderData(list) {
     dishBox.classList.add("dish-box");
     if (ele.isLiked) {
       likeColor = "red";
-    }else {
-      likeColor = 'black'
+    } else {
+      likeColor = "black";
     }
     dishBox.innerHTML = `<div class="imgBox"> <img src="${ele.imageSrc}" alt=""></div>
           <p class="vegOrNonVeg">${ele.type}</p>
@@ -183,7 +183,7 @@ function renderData(list) {
           <div class="row">
               <h1 class="minits-red">${ele.time}</h1>
               <p> <i style='color:${likeColor}' class="fa-regular fa-heart like"></i>
-                  <i class="fa-solid fa-message"></i>
+                <i class="fa-regular fa-message"></i>
               </p>
           </div>`;
     // console.log(dishBox.children[3].children[1].children[0]);
