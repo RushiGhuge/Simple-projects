@@ -215,7 +215,9 @@ body {
     display: flex;
     gap: 10px;
 }
-#cheakbox  label, input{
+
+#cheakbox label,
+input {
     cursor: pointer;
 }
 
@@ -229,7 +231,8 @@ body {
     width: 280px;
     transition: 0.3s ease-in-out;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         scale: 1.05;
     }
 }
@@ -264,13 +267,36 @@ body {
     gap: 5px;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to images with the 'fade-in' class */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out ;
+}
+
 .dish-container {
     width: 100%;
     /* background: red; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    transition: 1s;
+    /* animation: fadeIn 0.4s ease-in-out infinite alternate; */
 }
+
+/* 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+  } */
 
 #footer-container {
     display: flex;
@@ -332,4 +358,3 @@ body {
 .minits-red {
     color: #DC582A;
 }
-

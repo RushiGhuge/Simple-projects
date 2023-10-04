@@ -174,7 +174,7 @@ function renderData(list) {
     } else {
       likeColor = "black";
     }
-    dishBox.innerHTML = `<div class="imgBox"> <img src="${ele.imageSrc}" alt=""></div>
+    dishBox.innerHTML = `<div class="imgBox "> <img class = 'fade-in' src="${ele.imageSrc}" alt=""></div>
           <p class="vegOrNonVeg">${ele.type}</p>
           <div class="row">
               <h1>${ele.name}</h1>
