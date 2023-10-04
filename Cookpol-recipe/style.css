@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Rubik+Iso&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,8 @@
 }
 
 body {
-    font-size: 14px;
+    font-family: 'Poppins';
+    font-size: 16px;
 }
 
 #main {
@@ -109,7 +112,7 @@ body {
 }
 
 #box>h1 {
-    font-size: 3em;
+    font-size: 3vmax;
 }
 
 .trending {
@@ -144,25 +147,31 @@ body {
 }
 
 .buttons {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
+    flex-wrap: wrap;
     margin-top: 30px;
     gap: 20px;
-    overflow: auto;
 }
 
 .btn {
     display: flex;
-    align-self: center;
-    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
     background: green;
-    padding: 30px 20px;
-    min-width: 200px;
-    overflow: auto;
-    color: white;
-    font-size: 1.2em;
+    width: 236px;
+    height: 88px;
     border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
     cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn:hover {
+    opacity: 0.8;
 }
 
 .y {
@@ -177,58 +186,150 @@ body {
     background: #DC582A;
 }
 
-.fa-star{
-    color: rgb(255, 230, 0);
+.fa-star {
+    color: #FDC040;
 }
-.container{
+
+.container {
     margin-top: 30px;
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.filter{
+
+.filter {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 20px;
-    width: 400px;
+    padding: 0px;
+    width: 300px;
 }
-#cheakbox{
+
+#cheakbox {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-#cheakbox > div{
+
+#cheakbox>div {
     display: flex;
     gap: 10px;
 }
-.dish-box{
+#cheakbox  label, input{
+    cursor: pointer;
+}
+
+.dish-box {
     /* background: purple; */
     box-shadow: 0 0 5px gray;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     padding: 10px;
     margin: 10px;
-    border-radius:10px ;
+    border-radius: 10px;
+    width: 280px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        scale: 1.05;
+    }
 }
-.imgBox > img{
+
+.imgBox>img {
     width: 100%;
     height: 200px;
-    border-radius:10px ;
+    border-radius: 10px;
+    object-fit: cover;
 
 }
-.imgBox{
-    width: 250px;
+
+.imgBox {
+    width: 100%;
 }
-.row{
+
+.row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* padding: 10px; */
+    flex-wrap: wrap;
 }
-.row > p{
+
+.row>h1 {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.row>p {
     display: flex;
     gap: 5px;
 }
-.dish-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+
+.dish-container {
+    width: 100%;
+    /* background: red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
+
+#footer-container {
+    display: flex;
+    justify-content: center;
+    padding: 80px 50px;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    line-height: 1.4rem;
+
+}
+
+.footer-item img {
+    width: 100px;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+
+}
+
+.socialMedia>i {
+    font-size: 1em;
+    background: rgb(20, 27, 46);
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+}
+
+.input-Footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-Footer>input {
+    /* width: 100%; */
+    padding: 10px;
+}
+
+.input-Footer>button {
+    padding: 10px;
+    background: #509E2F;
+    border: none;
+    color: white;
+    font-size: 0.90em;
+}
+
+.minits-red {
+    color: #DC582A;
+}
+
