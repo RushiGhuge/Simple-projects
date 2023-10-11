@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --bg-light: #f1f1f1;
+    --bg-dark: #474747;
+    --bg-container-light :white;
+    --bg-container-dark :black;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background: var(--bg-light);
+    width: 100vw;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    min-height: 100vh;
+}
+
+.main-container {
+    width: 500px;
+    /* background: red; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 10px;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #767676;
+    padding: 15px;
+
+}
+
+.leftNav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.googleLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.googleLogo>h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.rightNav {
+    display: flex;
+}
+
+.rightNav>img {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.leftNav img {
+    height: 35px;
+}
+
+/* line  */
+.line {
+    width: 100%;
+    height: 1px;
+    background: #efebeb;
+
+}
+
+/* lang-option  */
+.lang-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.lang-option>span {
+    color: #767676;
+}
+
+.lang-option select {
+    width: 120px;
+    border: none;
+    background: transparent;
+    color: #2A72D3;
+    font-weight: 500;
+    font-size: 1.2em;
+    outline: none;
+}
+
+
+/* search-container  */
+.search-container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.searchIcons {
+    display: flex;
+    align-items: center;
+    /* background: red; */
+    height: 100%;
+    padding: 20px 0;
+    /* background: red; */
+    gap: 10px;
+    cursor: pointer;
+}
+
+#searchBtn {
+    background: #4888F4;
+    ;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+#searchId {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.3em;
+}
+
+.mic {
+    color: #767676;
+    font-size: 0em;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+
+.ans {
+    display: none;
+    background: #1972E8;
+    height: auto;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation: anim 0.3s ease-in-out;
+    transition: 0.5s;
+    /* height: 0; */
+    /* padding: 10px; */
+    color: white;
+    font-size: 1.15em;
+    overflow-y: auto;
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+@keyframes anim {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(100px);
+    }
+}
+
+#textAns {
+    padding:   20px ;
+    width: 90%;
+    word-wrap: break-word;
+}
+
+
+/* loading >>>>>>>>>>loading bar<<<<<<<<<<<<<<< */
+
+#loading-container {
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.678);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.spin::before {
+    animation: 1.5s linear infinite spinner;
+    animation-play-state: inherit;
+    border: solid 5px #cfd0d1;
+    border-bottom-color: #1c87c9;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 40px;
+    will-change: transform;
+}
+
+@keyframes spinner {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+}
+
+
+#oppositeLang{
+    cursor: pointer;
+}
+#copyBtn{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
