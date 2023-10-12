@@ -6,7 +6,10 @@ const ans = document.getElementsByClassName("ans")[0];
 const inputStr = document.getElementById("searchId");
 const loadingContainer = document.getElementById("loading-container");
 const oppositeLang = document.getElementById("oppositeLang");
-const copyBtn = document.getElementById("copyBtn");
+const copyBtn = document.getElementById("copyTextBtn");
+const speakerBtn = document.getElementById("speakerBtn");
+const speakerBtn2 = document.getElementById("speakerBtn2");
+
 
 let sourceLang = document.getElementById("sourceLang");
 let targetLang = document.getElementById("targetLang");
@@ -46,7 +49,7 @@ async function data() {
 searchBtn.addEventListener("click", () => {
   // call the functio with tha requred data like language and inputs
   data();
-  //   textAns.innerHTML = "output";
+  // textAns.innerHTML = "output";
 });
 closeBtn.addEventListener("click", () => {
   // ans.style.transform = 'translateY(-100px)';
@@ -79,3 +82,64 @@ copyBtn.addEventListener("click", () => {
     .then(() => alert("Text has been copied to the clipboard"))
     .catch((err) => console.error("Unable to copy text", err));
 });
+
+function speak() {
+  speakerBtn.classList.add("active");
+  // var textToSpeak = document.getElementById("textToSpeak").value;
+  const textToSpeak = inputStr.value;
+  // Create an instance of SpeechSynthesisUtterance
+
+  const utterance = new SpeechSynthesisUtterance(textToSpeak);
+  utterance.lang = sourceLang.value;
+
+  // Use the speech synthesis API to speak the text
+  window.speechSynthesis.speak(utterance);
+  utterance.onend = () => {
+    speakerBtn.classList.remove("active");
+  };
+}
+
+function speak2() {
+  speakerBtn2.classList.add("activePro");
+  // var textToSpeak = document.getElementById("textToSpeak").value;
+  const textToSpeak = textAns.value;
+  console.log(textAns.innerText);
+  // Create an instance of SpeechSynthesisUtterance
+
+  const utterance = new SpeechSynthesisUtterance(textToSpeak);
+  // utterance.lang = sourceLang.value;
+
+  // Use the speech synthesis API to speak the text
+  window.speechSynthesis.speak(utterance);
+  utterance.onend = () => {
+    speakerBtn2.classList.remove("activePro");
+  };
+}
+
+function startListening() {
+  var recognition = new (window.SpeechRecognition ||
+    window.webkitSpeechRecognition ||
+    window.mozSpeechRecognition ||
+    window.msSpeechRecognition)();
+
+  recognition.lang = sourceLang.value; // Set the language
+
+  // add active class
+  document.getElementById("micBtn").classList.add("active");
+
+  recognition.onresult = function (event) {
+    var spokenText = event.results[0][0].transcript;
+    document.getElementById("searchId").innerText = spokenText;
+  };
+
+  recognition.onerror = function (event) {
+    console.error("Speech recognition error", event);
+  };
+
+  recognition.onend = function () {
+    console.log("Speech recognition ended");
+    document.getElementById("micBtn").classList.remove("active");
+  };
+
+  recognition.start();
+}

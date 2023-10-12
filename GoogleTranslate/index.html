@@ -20,7 +20,7 @@
         <div class="main-container">
             <div class="nav">
                 <div class="leftNav">
-                    <span class="material-symbols-outlined">
+                    <span style="cursor: pointer;" class="material-symbols-outlined">
                         menu
                     </span>
                     <div class="googleLogo">
@@ -289,10 +289,10 @@
             </div>
 
             <dic class="mic">
-                <span class="material-symbols-outlined">
+                <span id="micBtn" onclick="startListening()" class="material-symbols-outlined">
                     mic
                 </span>
-                <span class="material-symbols-outlined">
+                <span id="speakerBtn" onclick="speak()" class="material-symbols-outlined">
                     volume_up
                 </span>
             </dic>
@@ -302,7 +302,7 @@
 
                 </div>
                 <dic id="copyBtn">
-                    <span class="material-symbols-outlined">
+                    <span id="copyTextBtn" class="material-symbols-outlined">
                         content_copy
                     </span>
                 </dic>

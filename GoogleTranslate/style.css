@@ -3,8 +3,8 @@
 :root {
     --bg-light: #f1f1f1;
     --bg-dark: #474747;
-    --bg-container-light :white;
-    --bg-container-dark :black;
+    --bg-container-light: white;
+    --bg-container-dark: black;
 
 }
 
@@ -19,15 +19,15 @@
     background: var(--bg-light);
     width: 100vw;
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
 }
 
 .main-container {
     width: 500px;
     /* background: red; */
-    margin: auto;
+    /* margin: auto; */
     display: flex;
     flex-direction: column;
     background: white;
@@ -151,6 +151,11 @@
     cursor: pointer;
 }
 
+.mic>span {
+    border-radius: 50%;
+    padding: 4px;
+}
+
 .material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
@@ -192,7 +197,7 @@
 }
 
 #textAns {
-    padding:   20px ;
+    padding: 20px;
     width: 90%;
     word-wrap: break-word;
 }
@@ -243,14 +248,85 @@
 }
 
 
-#oppositeLang{
+#oppositeLang {
     cursor: pointer;
 }
-#copyBtn{
-    width: 10%;
+
+#copyBtn {
+    width: 20%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    gap: 10px;
+}
+
+.active {
+    background: #1972E8;
+    animation: mic 0.8s alternate infinite;
+    color: white;
+}
+
+.activePro {
+    background: #1972E8;
+    animation: mic2 0.8s alternate infinite;
+    color: white;
+}
+
+@keyframes mic2 {
+    0% {
+        background: black;
+        color: white;
+    }
+
+    100% {
+        background: white;
+        color: black;
+    }
+}
+
+@keyframes mic {
+    0% {
+        background: #1972E8;
+        color: white;
+    }
+
+    100% {
+        background: none;
+        color: #474747;
+    }
+}
+
+
+
+
+/* make it to be a responsive  */
+
+@media(max-width:450px) {
+    .main-container {
+        /* background: red; */
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .container {
+        display: flex;
+        align-items: start;
+        /* height: 900px; */
+    }
+   
+}
+
+@media(max-width:366px) {
+   
+    .googleLogo > img{
+        display: none;
+    }
+    .searchIcons{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
 }
