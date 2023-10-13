@@ -10,7 +10,6 @@ const copyBtn = document.getElementById("copyTextBtn");
 const speakerBtn = document.getElementById("speakerBtn");
 const speakerBtn2 = document.getElementById("speakerBtn2");
 
-
 let sourceLang = document.getElementById("sourceLang");
 let targetLang = document.getElementById("targetLang");
 
@@ -52,7 +51,6 @@ searchBtn.addEventListener("click", () => {
   // textAns.innerHTML = "output";
 });
 closeBtn.addEventListener("click", () => {
-  // ans.style.transform = 'translateY(-100px)';
   ans.style.display = "none";
   inputStr.value = "";
   textAns.innerHTML = "";
@@ -99,28 +97,13 @@ function speak() {
   };
 }
 
-function speak2() {
-  speakerBtn2.classList.add("activePro");
-  // var textToSpeak = document.getElementById("textToSpeak").value;
-  const textToSpeak = textAns.value;
-  console.log(textAns.innerText);
-  // Create an instance of SpeechSynthesisUtterance
-
-  const utterance = new SpeechSynthesisUtterance(textToSpeak);
-  // utterance.lang = sourceLang.value;
-
-  // Use the speech synthesis API to speak the text
-  window.speechSynthesis.speak(utterance);
-  utterance.onend = () => {
-    speakerBtn2.classList.remove("activePro");
-  };
-}
-
 function startListening() {
-  var recognition = new (window.SpeechRecognition ||
+  let recognition = new (window.SpeechRecognition ||
     window.webkitSpeechRecognition ||
     window.mozSpeechRecognition ||
     window.msSpeechRecognition)();
+
+  recognition.interimResults = true;
 
   recognition.lang = sourceLang.value; // Set the language
 
@@ -129,7 +112,8 @@ function startListening() {
 
   recognition.onresult = function (event) {
     var spokenText = event.results[0][0].transcript;
-    document.getElementById("searchId").innerText = spokenText;
+    inputStr.value = spokenText;
+    console.log(spokenText)
   };
 
   recognition.onerror = function (event) {
