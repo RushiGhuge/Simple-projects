@@ -156,7 +156,7 @@
 
 .mic>span {
     border-radius: 50%;
-    padding: 4px;
+    padding: 7px;
 }
 
 .material-symbols-outlined {
@@ -225,7 +225,7 @@
 }
 
 .spin::before {
-    animation: 1.5s linear infinite spinner;
+    animation: 0.5s linear infinite spinner;
     animation-play-state: inherit;
     border: solid 5px #cfd0d1;
     border-bottom-color: #1c87c9;
@@ -287,6 +287,7 @@
         background: rgba(0, 0, 0, 0.17);
         /* color: black; */
     }
+
     /* 100{
         
     } */
@@ -304,7 +305,7 @@
     }
 }
 
-#speakerBtn2{
+#speakerBtn2 {
     border-radius: 50%;
     padding: 5px;
     cursor: pointer;
@@ -312,7 +313,7 @@
 }
 
 
-.textCopyAlert{
+.textCopyAlert {
     display: none;
     padding: 10px;
     width: 190px;
@@ -328,29 +329,33 @@
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
-@keyframes copyAlert{
-    0%{
+@keyframes copyAlert {
+    0% {
         transform: translateY(100px);
     }
-    15%{
+
+    15% {
         transform: translateY(-20px);
     }
-    85%{
+
+    85% {
         transform: translateY(-20px);
     }
-    100%{
+
+    100% {
         transform: translateY(100px);
     }
 }
 
 
-.material-symbols-outlined{
+.material-symbols-outlined {
     /* background: red; */
-    padding: 5px;
+    padding: 6px;
     border-radius: 50%;
     transition: 0.2s;
-    &:hover{
-        background: rgba(0, 0, 0, 0.128);
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.087);
     }
 }
 
@@ -370,23 +375,21 @@
         align-items: start;
         /* height: 900px; */
     }
-    .material-symbols-outlined{
-        /* background: red; */
-        padding: 5px;
-        border-radius: 50%;
-        transition: 0.2s;
-        &:hover{
+
+    .material-symbols-outlined {
+        &:hover {
             background: transparent;
         }
     }
 }
 
 @media(max-width:366px) {
-   
-    .googleLogo > img{
+
+    .googleLogo>img {
         display: none;
     }
-    .searchIcons{
+
+    .searchIcons {
         flex-direction: column-reverse;
         gap: 20px;
     }
