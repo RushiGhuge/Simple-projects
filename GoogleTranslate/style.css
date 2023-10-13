@@ -23,6 +23,8 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
 .main-container {
@@ -271,20 +273,23 @@
 
 .activePro {
     background: #1972E8;
-    animation: mic2 0.8s alternate infinite;
+    animation: mic2 0.4s alternate-reverse ease-in-out infinite;
     color: white;
 }
 
 @keyframes mic2 {
     0% {
-        background: black;
-        color: white;
+        background: rgb(0, 53, 80);
+        /* color: white; */
     }
 
     100% {
-        background: white;
-        color: black;
+        background: rgba(0, 0, 0, 0.17);
+        /* color: black; */
     }
+    /* 100{
+        
+    } */
 }
 
 @keyframes mic {
@@ -299,8 +304,58 @@
     }
 }
 
+#speakerBtn2{
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover{
+        background:#052754;
+    }
+}
 
 
+.textCopyAlert{
+    display: none;
+    padding: 10px;
+    width: 190px;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    background: rgb(36, 36, 36);
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    transform: translateY(100px);
+    animation: copyAlert 1.5s ease-in-out;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes copyAlert{
+    0%{
+        transform: translateY(100px);
+    }
+    15%{
+        transform: translateY(-20px);
+    }
+    85%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(100px);
+    }
+}
+
+
+.material-symbols-outlined{
+    /* background: red; */
+    padding: 5px;
+    border-radius: 50%;
+    transition: 0.2s;
+    &:hover{
+        background: rgba(0, 0, 0, 0.128);
+    }
+}
 
 /* make it to be a responsive  */
 

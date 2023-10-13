@@ -7,8 +7,10 @@ const inputStr = document.getElementById("searchId");
 const loadingContainer = document.getElementById("loading-container");
 const oppositeLang = document.getElementById("oppositeLang");
 const copyBtn = document.getElementById("copyTextBtn");
+const copyBtnInput = document.getElementById('copyTextBtnInput');
 const speakerBtn = document.getElementById("speakerBtn");
 const speakerBtn2 = document.getElementById("speakerBtn2");
+const textCopyAlertAnimation = document.querySelector('.textCopyAlert');
 
 let sourceLang = document.getElementById("sourceLang");
 let targetLang = document.getElementById("targetLang");
@@ -77,8 +79,21 @@ copyBtn.addEventListener("click", () => {
   let textToCopy = textAns.innerText;
   navigator.clipboard
     .writeText(textToCopy)
-    .then(() => alert("Text has been copied to the clipboard"))
+    .then(() => textCopyAlertAnimation.style.display = 'block')
     .catch((err) => console.error("Unable to copy text", err));
+    setTimeout(()=>{
+      textCopyAlertAnimation.style.display = 'none'
+    },1500)
+});
+copyBtnInput.addEventListener("click", () => {
+  let textToCopy = inputStr.value;
+  navigator.clipboard
+    .writeText(textToCopy)
+    .then(() => textCopyAlertAnimation.style.display = 'block')
+    .catch((err) => console.error("Unable to copy text", err));
+    setTimeout(()=>{
+      textCopyAlertAnimation.style.display = 'none'
+    },1500)
 });
 
 function speak() {
@@ -97,6 +112,24 @@ function speak() {
   };
 }
 
+function speakAns() {
+  document.getElementById("speakerBtn2").classList.add("activePro");
+  // var textToSpeak = document.getElementById("textToSpeak").value;
+  const textToSpeak = textAns.innerText;
+  // Create an instance of SpeechSynthesisUtterance
+
+  const utterance = new SpeechSynthesisUtterance(textToSpeak);
+  utterance.lang = targetLang.value;
+
+  // Use the speech synthesis API to speak the text
+  window.speechSynthesis.speak(utterance);
+  utterance.onend = () => {
+    // speakerBtn.classList.remove("active");
+    document.getElementById("speakerBtn2").classList.remove("activePro");
+  };
+  console.log(textToSpeak, "speak 2");
+}
+
 function startListening() {
   let recognition = new (window.SpeechRecognition ||
     window.webkitSpeechRecognition ||
@@ -113,7 +146,7 @@ function startListening() {
   recognition.onresult = function (event) {
     var spokenText = event.results[0][0].transcript;
     inputStr.value = spokenText;
-    console.log(spokenText)
+    console.log(spokenText);
   };
 
   recognition.onerror = function (event) {
