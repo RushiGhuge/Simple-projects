@@ -309,9 +309,6 @@
     padding: 5px;
     cursor: pointer;
     transition: 0.2s;
-    &:hover{
-        background:#052754;
-    }
 }
 
 
@@ -373,7 +370,15 @@
         align-items: start;
         /* height: 900px; */
     }
-   
+    .material-symbols-outlined{
+        /* background: red; */
+        padding: 5px;
+        border-radius: 50%;
+        transition: 0.2s;
+        &:hover{
+            background: transparent;
+        }
+    }
 }
 
 @media(max-width:366px) {
