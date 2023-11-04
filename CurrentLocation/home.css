@@ -53,6 +53,11 @@
     border-radius: 5px;
     color: rgb(202, 202, 202);
     font-size: 1.2em;
+    font-weight: 600;
+    &:hover{
+        background: white;
+        color: #575A85;
+    }
 }
 .value{
     color: white;
