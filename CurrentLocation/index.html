@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+</head>
+
+<body>
+
+
+    <div class="info-container">
+        <div class="ipAddres">
+            <p>IP Address : <span class="value" id="ip">127.45.07</span></p>
+        </div>
+
+        <div class="info-current">
+            <div class="info-col">
+                <p>Lat: <span id="Lat" class="value">asd</span></p>
+                <p>Long: <span id="long" class="value"></span></p>
+            </div>
+
+            <div class="info-col">
+                <p>City: <span id="city" class="value"></span></p>
+                <p>Region: <span id="Region" class="value"></span></p>
+            </div>
+
+            <div class="info-col">
+                <p>Organisation: <span id="org" class="value"></span></p>
+                <p>Hostname: <span id="host" class="value"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <h1>Your Current Location</h1>
+
+        <iframe id="map" src="https://maps.google.com/maps?q=35.856737, 10.606619&z=15&output=embed" width="90%"
+            height="600" frameborder="0" style="border:0"></iframe>
+    </div>
+
+    <div class="more-info-container">
+        <h1>More Information About You</h1>
+
+        <p>Time Zone: <span id="currentTimeZone" class="value"></span></p>
+        <p>Date And Time: <span id="currentDate" class="value"></span></p>
+        <p>Pincode: <span id="pincode" class="value"></span></p>
+        <p>Message: <span class="value" id="massage">Number of pincode(s) found:</span> </p>
+    </div>
+
+    <div class="post-office-container">
+        <h1>Post Offices Near You</h1>
+        <input type="text" onkeyup="filterPostoffice(this)" placeholder="Search By Names">
+
+        <div class="post-list">
+            <div class="post-box">
+                <p>Name : </p>
+                <p>Branch Type : </p>
+                <p>Delivery Status : </p>
+                <p>District : </p>
+                <p>Division : </p>
+            </div>
+
+            <div class="post-box">
+                <p>Name : </p>
+                <p>Branch Type : </p>
+                <p>Delivery Status : </p>
+                <p>District : </p>
+                <p>Division : </p>
+            </div>
+
+            <div class="post-box">
+                <p>Name : </p>
+                <p>Branch Type : </p>
+                <p>Delivery Status : </p>
+                <p>District : </p>
+                <p>Division : </p>
+            </div>
+
+            <div class="post-box">
+                <p>Name : </p>
+                <p>Branch Type : </p>
+                <p>Delivery Status : </p>
+                <p>District : </p>
+                <p>Division : </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
